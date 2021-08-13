@@ -12,6 +12,8 @@ using SupplementCRUDAPI.Services;
 using Microsoft.OpenApi.Models;
 
 
+//https://dev.to/etnicholson/developing-a-crudapi-with-asp-net-core-mongodb-docker-swagger-cf4
+
 namespace SupplementCRUDAPI
 {
     public class Startup
@@ -28,15 +30,19 @@ namespace SupplementCRUDAPI
         {
             services.AddRazorPages();
 
-
-
+            //https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/1342
+            // Controllerlari eklemezsek hata aliriz
+            services.AddControllers();
 
             services.AddScoped<SupplementService>();
 
             //https://stackoverflow.com/questions/53550096/why-swashbuckle-aspnet-core-swagger-not-being-recognized/59280297
             //Tutorial error in new Info resolved by using Microsoft.OpenApi.Models instead.
+
             services.AddSwaggerGen(c =>
             {
+               
+
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Title = "Supplement API",
@@ -75,6 +81,8 @@ namespace SupplementCRUDAPI
             {
                 endpoints.MapRazorPages();
             });
+
+
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
