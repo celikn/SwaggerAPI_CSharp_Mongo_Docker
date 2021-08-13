@@ -83,3 +83,11 @@
 
 
 6. Go to http://localhost:5002/swagger/index.html to access swaggerpage
+
+
+
+##### Side Notes
+
+Git access with token authentication
+
+'''git remote add origin https://[USERNAME]:[NEW TOKEN]@github.com/[USERNAME]/[REPO].git'''
