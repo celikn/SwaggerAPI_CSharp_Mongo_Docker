@@ -1,8 +1,8 @@
-﻿# Sample Swagger API with C# using MongoDB and Docker
+﻿### Sample Swagger API with C# using MongoDB and Docker
 
-## The second largest heading
-###### Tutorial was implemented at https://dev.to/etnicholson/developing-a-crudapi-with-asp-net-core-mongodb-docker-swagger-cf4
-## Steps to follow to create an application
+##### Tutorial was followed at https://dev.to/etnicholson/developing-a-crudapi-with-asp-net-core-mongodb-docker-swagger-cf4 
+
+#### Steps to follow to create an application
 
 1. Create empty web api
 2. Install 2 packages: MongoDB.Driver and Swashbuckle.AspNetCore
